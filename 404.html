@@ -11,7 +11,12 @@
   </head>
   <br>
   <script language="javascript">
-    <br>        var domain = "tremblingv5.github.io";<br>        var current = window.location.href;<br>        var target = current.substring(current.indexOf('/', current.indexOf(':') + 3));<br>        window.location.href = "//" + domain + target;<br>        location.href = "//" + domain + target;<br>
+    var domain = "tremblingv5.github.io";
+    var src = window.location.href;
+    var prtc = src.substring(0, src.indexOf(':'));
+    var target = src.substring(src.indexOf('/', src.indexOf(':') + 3));
+    window.location.href = prtc + "://" + domain + target;
+    location.href=prtc + "://" + domain + target;
   </script>
   <br>
   <body>
